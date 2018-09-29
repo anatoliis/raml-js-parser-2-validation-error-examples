@@ -8,16 +8,16 @@ protocols: [ HTTPS ]
 description: Test API. Release v0.0.1
 
 traits:
-  Trait: !include trait.raml
+  Trait1: !include trait_1.raml
 
 types:
-  Type: !include type.raml
+  Type1: !include type_1.raml
 
 resourceTypes:
   Item: !include item.raml
 
-/element:
-  type: { Item: { typeName : Type } }
+/element1:
+  type: { Item: { typeName : Type1 } }
   get:
     is:
-      - Trait
+      - Trait1
